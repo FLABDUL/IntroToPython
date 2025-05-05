@@ -1,0 +1,88 @@
+# Design Pattern Summary
+
+1. Singleton Pattern
+---------------------
+Purpose:
+- Ensure only one instance of a class exists, with global access.
+
+Pros:
+- Controlled access to a single instance.
+- Saves memory/resources via reuse.
+- Easy to implement with lazy initialization.
+
+Cons:
+- Can become global state (discouraged).
+- Difficult to unit test due to shared state.
+- May violate Single Responsibility Principle (SRP).
+
+Use Cases:
+- Logging systems
+- Configuration managers
+- Database connection pools
+- Caching services
+
+
+2. Factory Pattern
+---------------------
+Purpose:
+- Provide an interface for creating objects, hiding instantiation logic.
+
+Pros:
+- Encapsulates complex creation logic.
+- Promotes loose coupling.
+- Easily extendable.
+- Supports dynamic object creation.
+
+Cons:
+- Adds complexity and extra classes.
+- Overhead if used unnecessarily.
+
+Use Cases:
+- GUI components (buttons, forms)
+- Game objects (enemies, weapons)
+- External API clients
+- Dependency Injection containers
+
+
+3. Strategy Pattern
+---------------------
+Purpose:
+- Define a family of interchangeable algorithms or behaviors.
+
+Pros:
+- Adheres to Open/Closed Principle.
+- Easy to test, modify, extend.
+- Reduces conditional logic in the context class.
+
+Cons:
+- Requires additional classes.
+- May become hard to manage with too many strategies.
+
+Use Cases:
+- Payment processing (CreditCard, PayPal, Crypto)
+- Sorting algorithms
+- Game character behaviors
+- Business rule variations
+
+
+4. Observer Pattern
+---------------------
+Purpose:
+- Allow objects to be notified of changes in another object (Publisher/Subscriber).
+
+Pros:
+- Decouples subject from observers.
+- Enables reactive, event-driven programming.
+- Scalable one-to-many communication.
+
+Cons:
+- Hard to trace and debug.
+- Risk of memory leaks if not properly managed.
+- No guaranteed order of notification.
+
+Use Cases:
+- UI event handling (click, change)
+- Real-time systems (chat, stock updates)
+- MVC architecture (View updates on Model change)
+- Notification systems (Email/SMS alerts)
+
